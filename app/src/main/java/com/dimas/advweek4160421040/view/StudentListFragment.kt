@@ -42,7 +42,6 @@ class StudentListFragment : Fragment() {
             binding.refreshLayout.isRefreshing = false
         }
 
-
         observeViewModel()
     }
 

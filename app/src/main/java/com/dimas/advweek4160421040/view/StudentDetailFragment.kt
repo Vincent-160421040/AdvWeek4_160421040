@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.dimas.advweek4160421040.R
 import com.dimas.advweek4160421040.databinding.FragmentStudentDetailBinding
 import com.dimas.advweek4160421040.viewmodel.DetailViewModel
@@ -38,7 +39,11 @@ class StudentDetailFragment : Fragment() {
             student.photoUrl?.let { url ->
                 Picasso.get().load(url).into(binding.imageView2)
             }
-
         })
+
+        binding.btnBack.setOnClickListener {
+            val action = StudentDetailFragmentDirections.actionStudentList()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 }

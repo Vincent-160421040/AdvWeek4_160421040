@@ -10,3 +10,22 @@ data class Student(
     @SerializedName("photo_url") val photoUrl:String
 )
 
+data class Specs(
+    val screen_size: Double,
+    val resolution: String,
+    val graphics_card: String,
+    val operating_system: String
+)
+
+data class Laptop(
+    val id: Int,
+    val brand: String,
+    val model: String,
+    val processor: String,
+    val ram_gb: Int,
+    val storage_gb: Int,
+    val features: List<String>,
+    val specs: Specs,
+    val images: String
+)
+

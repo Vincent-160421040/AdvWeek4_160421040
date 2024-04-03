@@ -3,13 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/studentListFragment">
+    app:startDestination="@id/laptopListFragment2">
 
     <fragment
         android:id="@+id/studentDetailFragment"
         android:name="com.dimas.advweek4160421040.view.StudentDetailFragment"
         android:label="fragment_student_detail"
-        tools:layout="@layout/fragment_student_detail" />
+        tools:layout="@layout/fragment_student_detail" >
+        <action
+            android:id="@+id/actionStudentList"
+            app:destination="@id/studentListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/studentListFragment"
         android:name="com.dimas.advweek4160421040.view.StudentListFragment"
@@ -19,4 +23,9 @@
             android:id="@+id/actionStudentDetail"
             app:destination="@id/studentDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/laptopListFragment2"
+        android:name="com.dimas.advweek4160421040.view.LaptopListFragment"
+        android:label="fragment_laptop_list"
+        tools:layout="@layout/fragment_laptop_list" />
 </navigation>
